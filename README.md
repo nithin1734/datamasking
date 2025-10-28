@@ -11,31 +11,186 @@ Datamasking is a small utility/library for masking or redacting sensitive data i
 
 ---
 
-## 🚀 Quick start — All common commands
+## Quick start — Single-command setup
 
-Pick the section that matches your stack.
+Use the included setup scripts to create a Python virtual environment and install runtime + dev dependencies, and (if present) install Node dependencies.
 
-## Installation (single-command)
-
-To keep installation simple, this project supports a single setup script that installs Python dependencies from requirements.txt and Node dependencies (if package.json exists).
-
-1. Make sure you have Python 3 and/or Node.js installed.
-2. Create a requirements.txt file at the project root (see example below) or generate one from your environment.
-3. Run the single command:
-
+Unix / macOS (one-liner):
 ```bash
-# Unix / macOS
+# Make setup script executable and run it
+chmod +x ./setup.sh
 ./setup.sh
 
-# Windows (PowerShell)
-.\setup.ps1
+# OR do everything inline (single command)
+python3 -m venv .venv && source .venv/bin/activate && python -m pip install --upgrade pip && pip install -r requirements.txt -r requirements-dev.txt
 ```
 
-What the script does:
-- Creates a Python virtual environment at .venv (if not present)
-- Installs Python packages from requirements.txt into the venv
-- Runs npm ci if package.json is present
-- Prints final instructions to activate the venv
+Windows (PowerShell):
+```powershell
+# Run the PowerShell setup script
+.\setup.ps1
+
+# OR inline:
+python -m venv .venv; .\.venv\Scripts\Activate.ps1; python -m pip install --upgrade pip; pip install -r requirements.txt -r requirements-dev.txt
+```
+
+What the setup scripts do:
+- Create a virtualenv at .venv (if missing)
+- Upgrade pip in the venv
+- Install runtime packages from requirements.txt
+- Install development packages from requirements-dev.txt
+- If package.json exists, run npm ci to install Node dependencies
+
+Activate the venv after setup:
+- Unix / macOS: source .venv/bin/activate
+- Windows PowerShell: .\.venv\Scripts\Activate.ps1
+
+---
+
+## Files: requirements & setup scripts
+
+- requirements.txt — runtime dependencies (kept minimal; enable optional packages as needed)
+- requirements-dev.txt — development & CI tools (linters, test runners, packaging)
+- setup.sh — cross-platform-ish shell script to automate venv creation and installs
+- setup.ps1 — PowerShell script for Windows automation
+
+Example (already included in repo):
+```text
+# requirements.txt
+pyyaml>=6.0
+click>=8.1.3
+requests>=2.31.0
+# optional:
+# regex>=2023.8.8
+# cryptography>=41.0.0
+```
+
+```text
+# requirements-dev.txt
+pytest>=7.3.0
+ruff>=0.17.0
+black>=24.0.0
+flake8>=6.0.0
+mypy>=1.4.0
+build>=1.0.0
+twine>=4.0.0
+isort>=5.12.0
+```
+
+---
+
+## Python — Install & run (recommended for library/CLI dev)
+
+1. Create & activate venv:
+```bash
+python3 -m venv .venv
+source .venv/bin/activate   # Unix / macOS
+# or on Windows PowerShell:
+# .\.venv\Scripts\Activate.ps1
+```
+
+2. Install dependencies:
+```bash
+pip install --upgrade pip
+pip install -r requirements.txt           # runtime
+pip install -r requirements-dev.txt       # dev (optional)
+```
+
+3. Install the package (editable, for development):
+```bash
+pip install -e .
+```
+
+4. Run tests / linters:
+```bash
+pytest
+ruff check .
+flake8 .
+black .
+mypy
+```
+
+5. Build / publish:
+```bash
+python -m build
+python -m twine upload dist/*
+```
+
+Run the CLI (after pip install -e . or pip install .):
+```bash
+# Mask a CSV
+datamasking mask --input data/input.csv --output data/output.masked.csv --config mask-rules.yml
+
+# Dry run
+datamasking mask --input data/input.csv --dry-run --config mask-rules.yml
+
+# Validate rules
+datamasking validate --config mask-rules.yml
+```
+
+If the CLI executable is not installed, run via module (if available):
+```bash
+python -m datamasking mask --input data/input.csv --config mask-rules.yml
+```
+
+---
+
+## Node.js / JavaScript (if applicable)
+
+Install & run Node tasks:
+```bash
+# Install dependencies
+npm install
+
+# Clean CI install
+npm ci
+
+# Run tests
+npm test
+
+# Lint / format / build
+npm run lint
+npm run format
+npm run build
+
+# Run CLI locally (without global install)
+npx datamasking mask --help
+```
+
+---
+
+## Go (if the Go CLI is included)
+
+Build & run:
+```bash
+# Install CLI (module-aware)
+go install github.com/nithin1734/datamasking/cmd/datamasking@latest
+
+# Or build locally
+go build ./cmd/datamasking
+
+# Run tests
+go test ./...
+
+# Run CLI
+./datamasking mask --input data/input.csv --output data/output.masked.csv --config mask-rules.yml
+```
+
+---
+
+## Docker
+
+Build and run using Docker:
+```bash
+# Build Docker image
+docker build -t datamasking:latest .
+
+# Run (example mounts a host data directory)
+docker run --rm -v "$(pwd)"/data:/data datamasking:latest mask --input /data/input.csv --output /data/output.masked.csv --config /data/mask-rules.yml
+```
+
+---
+
 
 ## 📋 CLI examples (common flags) ✨
 
