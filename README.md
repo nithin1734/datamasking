@@ -1,6 +1,11 @@
 # datamasking 🔒🧩
+Datamasking is a small utility/library for masking or redacting sensitive data in logs, files, and API responses. It helps teams keep personally identifiable information (PII) and other secrets safe by replacing or obfuscating sensitive fields before storing or transmitting data.
 
-Lightweight data masking / anonymization utilities for development, testing, and safe data-sharing. datamasking helps you obfuscate or redact sensitive fields in datasets, logs, or streams while preserving structure and usability.
+## About
+
+- Purpose: Protect sensitive information by applying configurable masking rules to structured and unstructured data.
+- Use cases: Logging pipelines, API response filtering, test data generation, and data export sanitization.
+- Goal: Provide an easy-to-integrate, fast, and configurable solution for teams that need to comply with privacy requirements or reduce risk from exposed data.
 
 > ⚠️ This README is implementation-agnostic — adjust install & usage commands to match this repository's language and package layout (Python / Node / Go / etc.). Below each command section you'll find a copy-ready command box you can paste into your terminal.
 
@@ -253,7 +258,58 @@ Add CI config (GitHub Actions, GitLab CI, etc.) to run tests, lint, and build on
 Consider adding a CONTRIBUTING.md with repo-specific guidelines.
 
 ---
+## Development environment & tools
 
+A generic list of software commonly used to prepare and maintain this project:
+
+- Version control and hosting
+  - Git
+  - GitHub
+
+- Languages & runtimes
+  - Node.js (JavaScript / TypeScript)
+  - Python
+  - Go (if applicable)
+
+- Package managers & dependency tools
+  - npm / yarn (Node)
+  - pip / pipenv / Poetry (Python)
+  - go modules (go.mod)
+
+- Build, task runners & packaging
+  - npm scripts / Make
+  - webpack / rollup (for bundling JavaScript)
+  - setup.py / setuptools (Python packaging)
+
+- Containerization & deployment
+  - Docker (Dockerfile, docker-compose)
+  - Kubernetes / Helm (optional for deployment)
+
+- Continuous integration / delivery
+  - GitHub Actions
+  - Travis CI / CircleCI (optional)
+
+- Testing, linting & formatting
+  - Jest / Mocha (JavaScript)
+  - pytest (Python)
+  - ESLint, Prettier (code quality / formatting)
+
+- Documentation & docs tooling
+  - README.md (Markdown)
+  - JSDoc / TypeDoc (JS docs) or Sphinx (Python docs)
+
+- Security & dependency scanning
+  - Dependabot / npm audit / safety
+
+- Editors & IDEs (commonly used)
+  - Visual Studio Code
+  - IntelliJ / PyCharm (as applicable)
+
+- Utilities & libraries often used
+  - Regex libraries (built-in)
+  - Hashing/encryption libraries (crypto, hashlib, bcrypt)
+  - Logging libraries (Winston, loguru, logback)
+    
 ## 📜 License
 
 This repository includes two license files so you can choose the licensing approach:
