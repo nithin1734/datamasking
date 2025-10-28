@@ -1,0 +1,11 @@
+# Core runtime dependencies (keep minimal; uncomment optional lines only if used)
+pyyaml>=6.0
+click>=8.1.3
+requests>=2.31.0
+
+# Optional - enable only if your code needs them:
+# Advanced regex engine (use if you rely on features beyond Python's `re`)
+# regex>=2023.8.8
+
+# Cryptography (only if you need encryption/higher-level crypto; otherwise use hashlib)
+# cryptography>=41.0.0
