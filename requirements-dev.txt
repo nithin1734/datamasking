@@ -1,0 +1,17 @@
+# Testing
+pytest>=7.3.0
+
+# Fast linter + formatter tools (ruff is lightweight & fast)
+ruff>=0.17.0
+black>=24.0.0
+flake8>=6.0.0
+
+# Type checking (optional but recommended)
+mypy>=1.4.0
+
+# Packaging & publishing
+build>=1.0.0
+twine>=4.0.0
+
+# Import sorting (optional)
+isort>=5.12.0
