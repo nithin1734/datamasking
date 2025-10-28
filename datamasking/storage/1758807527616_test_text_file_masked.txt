@@ -1,0 +1,49 @@
+Personal Information Records - Confidential
+
+Employee: John Smith
+Email: john.smith@company.com
+Phone: +91-9876543210
+SSN: 123-45-6789
+Date of Birth: 1985-03-15
+Address: 123 Main Street, Mumbai, Maharashtra, India
+Credit Card: 4532-1234-5678-9012
+Bank Account: ACC-789456123
+
+Employee: Sarah Johnson
+Email: sarah.j@company.com
+Phone: +91-8765432109
+SSN: 987-65-4321
+Date of Birth: 1990-07-22
+Address: 456 Oak Avenue, Delhi, India
+Credit Card: 5555-4444-3333-2222
+Bank Account: ACC-654321987
+
+Employee: Rajesh Kumar
+Email: rajesh.kumar@company.com
+Phone: +91-7654321098
+SSN: 456-78-9123
+Date of Birth: 1988-12-08
+Address: 789 Pine Road, Bangalore, Karnataka, India
+Credit Card: 3782-8224-6310-005
+Bank Account: ACC-321987654
+
+Employee: Priya Sharma
+Email: priya.sharma@company.com
+Phone: +91-6543210987
+SSN: 789-12-3456
+Date of Birth: 1992-05-18
+Address: 321 Cedar Lane, Chennai, Tamil Nadu, India
+Credit Card: 6011-1111-1111-1117
+Bank Account: ACC-987654321
+
+Employee: Michael Brown
+Email: m.brown@company.com
+Phone: +91-5432109876
+SSN: 321-65-4987
+Date of Birth: 1987-09-30
+Address: 654 Elm Street, Pune, Maharashtra, India
+Credit Card: 4111-1111-1111-1111
+Bank Account: ACC-456789123
+
+Additional Sensitive Information:
+- All employees have

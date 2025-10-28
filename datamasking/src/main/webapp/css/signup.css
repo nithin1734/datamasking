@@ -1,0 +1,272 @@
+/* --- Google Font Import --- */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+/* --- Global Styles & Variables --- */
+:root {
+    --primary-color: #4a90e2; /* A soft, professional blue */
+    --primary-hover-color: #357ABD;
+    --background-color: #f4f7f9; /* Very light grey */
+    --card-background-color: #ffffff;
+    --text-color: #4A4A4A; /* Dark grey for readability */
+    --muted-text-color: #9B9B9B;
+    --border-color: #e0e0e0;
+    --success-color: #d4edda;
+    --success-border-color: #c3e6cb;
+    --success-text-color: #155724;
+    --danger-color: #f8d7da;
+    --danger-border-color: #f5c6cb;
+    --danger-text-color: #721c24;
+    --box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    --border-radius: 8px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 1.6;
+    padding: 2rem 0; /* Add padding for scrollable content */
+    overflow-y: auto; /* Allow vertical scrolling if needed */
+}
+
+/* --- Signup Container & Card Styling --- */
+.signup-container {
+    width: 100%;
+    max-width: 750px; /* Wider container for the signup form */
+    background-color: var(--card-background-color);
+    padding: 2.5rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    transition: all 0.3s ease;
+}
+
+/* --- Header --- */
+.signup-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.signup-header .fa-user-plus {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.signup-header h2 {
+    font-size: 1.75rem;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+    color: var(--text-color);
+}
+
+.signup-header p {
+    color: var(--muted-text-color);
+    font-size: 0.95rem;
+}
+
+/* --- Form Layout & Elements --- */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -10px;
+    margin-left: -10px;
+}
+
+.col-md-6, .col-md-12 {
+    position: relative;
+    width: 100%;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+.col-md-6 {
+    flex: 0 0 50%;
+    max-width: 50%;
+}
+
+.col-md-12 {
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+
+form .mb-4 {
+    margin-bottom: 1.25rem !important;
+}
+
+.form-label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+
+.form-label .fas {
+    margin-right: 0.5rem;
+    color: var(--muted-text-color);
+    width: 16px; /* Align icons */
+}
+
+.form-control {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-control:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.2);
+}
+
+/* --- Password Specific Styles --- */
+.password-strength {
+    font-size: 0.8rem;
+    color: var(--muted-text-color);
+    margin-top: 0.5rem;
+    display: flex;
+    align-items: center;
+}
+
+.password-strength .fas {
+    margin-right: 0.3rem;
+}
+
+.password-match {
+    margin-top: 0.5rem;
+}
+
+/* --- Error Text Styling --- */
+.text-danger.small {
+    color: var(--danger-text-color);
+    font-size: 0.85rem;
+    margin-top: 0.25rem;
+    display: block;
+}
+
+/* --- Buttons --- */
+.d-grid {
+    display: grid;
+}
+
+.btn-signup {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 0.8rem;
+    border: none;
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.btn-signup:hover {
+    background-color: var(--primary-hover-color);
+    transform: translateY(-2px);
+}
+
+.btn-signup:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+    transform: none;
+}
+
+
+/* --- Links & Footer --- */
+.text-center {
+    text-align: center;
+    margin-top: 1.5rem;
+}
+
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--primary-hover-color);
+    text-decoration: underline;
+}
+
+.text-muted {
+    color: var(--muted-text-color);
+}
+
+/* --- Alerts --- */
+.alert {
+    padding: 1rem;
+    margin-bottom: 1.25rem;
+    border: 1px solid transparent;
+    border-radius: var(--border-radius);
+    display: flex;
+    align-items: center;
+    position: relative;
+    font-size: 0.95rem;
+}
+
+.alert .fas {
+    margin-right: 0.75rem;
+}
+
+.alert-danger {
+    color: var(--danger-text-color);
+    background-color: var(--danger-color);
+    border-color: var(--danger-border-color);
+}
+
+.btn-close {
+    background: transparent;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    right: 1rem;
+    transform: translateY(-50%);
+    padding: 0.25rem 0.5rem;
+    color: inherit;
+    opacity: 0.7;
+}
+
+.btn-close:hover {
+    opacity: 1;
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 768px) {
+    .col-md-6 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    body {
+        align-items: flex-start; /* Align to top on small screens */
+    }
+
+    .signup-container {
+        padding: 2rem 1.5rem;
+    }
+}

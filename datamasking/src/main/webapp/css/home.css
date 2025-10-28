@@ -1,0 +1,427 @@
+/* home.css */
+
+/* Import Poppins font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f8f9fa;
+    color: #343a40;
+    line-height: 1.5;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Navbar Styles - Compact */
+.navbar {
+    background-color: #ffffff;
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.08);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 0.75rem 0;
+}
+
+.navbar-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-brand {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #4a90e2;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.navbar-brand i {
+    font-size: 1.5rem;
+    color: #4a90e2;
+}
+
+.navbar-nav {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #343a40;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.4rem 0.8rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    font-size: 0.95rem;
+}
+
+.nav-link:hover {
+    background-color: #e9ecef;
+    color: #4a90e2;
+}
+
+.logout-form {
+    display: flex;
+}
+
+.btn-logout {
+    background-color: #dc3545;
+    color: #ffffff;
+    border: none;
+    padding: 0.5rem 1.2rem;
+    border-radius: 5px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    transition: background-color 0.3s ease;
+    font-size: 0.95rem;
+}
+
+.btn-logout:hover {
+    background-color: #c82333;
+}
+
+/* Hero Section - New Dashboard-Style Side-by-Side Layout (Compact) */
+.hero-section {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.06);
+    margin: 80px auto 1.5rem;
+    padding: 1.5rem;
+}
+
+.hero-dashboard {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 1.5rem;
+    align-items: start;
+}
+
+.hero-welcome h1 {
+    font-size: 1.75rem;
+    font-weight: 600;
+    color: #343a40;
+    margin-bottom: 0.5rem;
+}
+
+.hero-welcome p {
+    font-size: 1rem;
+    color: #6c757d;
+    margin-bottom: 1rem;
+}
+
+.btn-primary {
+    background-color: #4a90e2;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 6px;
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    transition: background-color 0.3s ease;
+    font-size: 0.95rem;
+}
+
+.btn-primary:hover {
+    background-color: #357abd;
+}
+
+.hero-profile {
+    background-color: #f8f9fa;
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+.hero-profile h4 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #343a40;
+    margin-bottom: 0.75rem;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.profile-grid {
+    display: grid;
+    gap: 0.5rem;
+}
+
+.profile-item {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    color: #343a40;
+    font-size: 0.85rem;
+}
+
+.profile-item i {
+    color: #4a90e2;
+    width: 16px;
+    font-size: 0.9rem;
+}
+
+/* Main Content - New Dashboard Layout with Stacked Sections */
+.dashboard-main {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Section Headers */
+.section-header {
+    padding: 0 0 1rem 0;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.section-header h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #343a40;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+/* Features Grid - New 2x2 Card Layout */
+.features-grid {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.06);
+    padding: 1.5rem;
+    overflow: hidden;
+}
+
+.features-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+}
+
+.feature-card {
+    background-color: #f8f9fa;
+    padding: 1rem;
+    border-radius: 8px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.feature-icon {
+    width: 50px;
+    height: 50px;
+    background-color: #4a90e2;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 0.75rem;
+}
+
+.feature-icon i {
+    font-size: 1.2rem;
+    color: #ffffff;
+}
+
+.feature-card h4 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #343a40;
+    margin-bottom: 0.5rem;
+}
+
+.feature-card p {
+    color: #6c757d;
+    font-size: 0.85rem;
+}
+
+/* Masking Techniques - New Icon-List Layout */
+.techniques-section {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.06);
+    overflow: hidden;
+}
+
+.content-card .section-header {
+    background-color: #f8f9fa;
+    padding: 1rem;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.techniques-list {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.technique-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    padding: 0.75rem;
+    background-color: #f8f9fa;
+    border-radius: 6px;
+    border-left: 3px solid #4a90e2;
+}
+
+.technique-item i {
+    color: #4a90e2;
+    font-size: 1rem;
+    margin-top: 0.2rem;
+    flex-shrink: 0;
+}
+
+.technique-item h4 {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #343a40;
+    margin-bottom: 0.2rem;
+}
+
+.technique-item p {
+    color: #6c757d;
+    font-size: 0.85rem;
+    font-style: italic;
+    margin: 0;
+}
+
+/* Error Message - Compact */
+.error-message {
+    background-color: #f8d7da;
+    color: #721c24;
+    padding: 1.5rem;
+    border-radius: 12px;
+    text-align: center;
+    margin: 80px auto;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.06);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: 0.95rem;
+}
+
+.error-message i {
+    font-size: 1.5rem;
+    color: #dc3545;
+}
+
+/* Responsive Design - Adapted for New Layout */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 10px;
+    }
+
+    .navbar-container {
+        flex-direction: column;
+        gap: 0.75rem;
+        padding: 0 10px;
+    }
+
+    .navbar-nav {
+        flex-direction: column;
+        gap: 0.75rem;
+        width: 100%;
+    }
+
+    .hero-section {
+        margin: 100px auto 1.5rem;
+        padding: 1rem;
+    }
+
+    .hero-dashboard {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .hero-welcome h1 {
+        font-size: 1.5rem;
+    }
+
+    .features-container {
+        grid-template-columns: 1fr;
+        gap: 0.75rem;
+    }
+
+    .techniques-list {
+        padding: 1rem;
+    }
+
+    .features-grid,
+    .techniques-section {
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        font-size: 14px;
+    }
+
+    .hero-section {
+        padding: 1rem;
+        margin: 90px auto 1rem;
+    }
+
+    .hero-welcome h1 {
+        font-size: 1.25rem;
+    }
+
+    .btn-primary,
+    .btn-logout,
+    .nav-link {
+        width: 100%;
+        justify-content: center;
+        padding: 0.75rem;
+        text-align: center;
+    }
+
+    .profile-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .feature-card {
+        padding: 0.75rem;
+    }
+
+    .technique-item {
+        padding: 0.5rem;
+        gap: 0.5rem;
+    }
+}

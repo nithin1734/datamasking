@@ -1,0 +1,67 @@
+[ {
+  "customer_id" : "*******",
+  "personal_info" : {
+    "full_name" : "************",
+    "email" : "**********************",
+    "phone" : "**************",
+    "date_of_birth" : "**********",
+    "aadhaar" : "**************",
+    "pan" : "**********"
+  },
+  "address" : {
+    "street" : "*********************",
+    "city" : "*********",
+    "state" : "*********",
+    "pincode" : "******"
+  },
+  "financial_info" : {
+    "account_number" : "**********",
+    "ifsc_code" : "***********",
+    "credit_card" : "*******************",
+    "annual_income" : "******"
+  }
+}, {
+  "customer_id" : "*******",
+  "personal_info" : {
+    "full_name" : "************",
+    "email" : "**********************",
+    "phone" : "**************",
+    "date_of_birth" : "**********",
+    "aadhaar" : "**************",
+    "pan" : "**********"
+  },
+  "address" : {
+    "street" : "**********************",
+    "city" : "******",
+    "state" : "***********",
+    "pincode" : "******"
+  },
+  "financial_info" : {
+    "account_number" : "**********",
+    "ifsc_code" : "***********",
+    "credit_card" : "*******************",
+    "annual_income" : "******"
+  }
+}, {
+  "customer_id" : "*******",
+  "personal_info" : {
+    "full_name" : "**********",
+    "email" : "**********************",
+    "phone" : "**************",
+    "date_of_birth" : "**********",
+    "aadhaar" : "**************",
+    "pan" : "**********"
+  },
+  "address" : {
+    "street" : "********************",
+    "city" : "*********",
+    "state" : "*******",
+    "pincode" : "******"
+  },
+  "financial_info" : {
+    "account_number" : "**********",
+    "ifsc_code" : "***********",
+    "credit_card" : "*******************",
+    "annual_income" : "******"
+  }
+} ]

@@ -1,0 +1,12 @@
+2024-01-15 10:30:25 - User login: john.doe@company.com from IP 192.168.1.100
+2024-01-15 10:31:10 - Payment processed for card 4532-1234-5678-9012 amount $250.50
+2024-01-15 10:32:45 - Profile update for user sarah.smith@company.com phone: 9876543210
+2024-01-15 10:33:20 - KYC verification for Aadhaar: 1234-5678-9012 PAN: ABCDE1234F
+2024-01-15 10:34:05 - Password reset request from michael.brown@gmail.com
+2024-01-15 10:35:30 - Transaction failed for account 1234567890 IFSC: HDFC0001234
+2024-01-15 10:36:15 - New user registered: priya.patel@yahoo.com DOB: 1990-05-20
+2024-01-15 10:37:00 - API call from IP 10.0.0.50 for user ID: USR123456
+2024-01-15 10:38:45 - Credit check for PAN: BCDEF2345G score: 750
+2024-01-15 10:39:30 - SMS sent to +91-8765432109 for OTP verification
+2024-01-15 10:40:15 - Database backup completed for customer data
+2024-01-15 10:41:00 - Failed login attempt from IP 203.45.67.89 user: admin@company.com

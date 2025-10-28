@@ -1,0 +1,71 @@
+[
+  {
+    "customer_id": "CUST001",
+    "personal_info": {
+      "full_name": "Rajesh Kumar",
+      "email": "rajesh.kumar@gmail.com",
+      "phone": "+91-9876543210",
+      "date_of_birth": "1985-06-15",
+      "aadhaar": "1234 5678 9012",
+      "pan": "ABCDE1234F"
+    },
+    "address": {
+      "street": "House No 123, MG Road",
+      "city": "Bangalore",
+      "state": "Karnataka",
+      "pincode": "560001"
+    },
+    "financial_info": {
+      "account_number": "1234567890",
+      "ifsc_code": "HDFC0001234",
+      "credit_card": "4532-1234-5678-9012",
+      "annual_income": 850000
+    }
+  },
+  {
+    "customer_id": "CUST002",
+    "personal_info": {
+      "full_name": "Priya Sharma",
+      "email": "priya.sharma@yahoo.com",
+      "phone": "+91-8765432109",
+      "date_of_birth": "1990-12-03",
+      "aadhaar": "2345 6789 0123",
+      "pan": "BCDEF2345G"
+    },
+    "address": {
+      "street": "Flat 456, Brigade Road",
+      "city": "Mumbai",
+      "state": "Maharashtra",
+      "pincode": "400001"
+    },
+    "financial_info": {
+      "account_number": "2345678901",
+      "ifsc_code": "ICIC0002345",
+      "credit_card": "5432-2345-6789-0123",
+      "annual_income": 920000
+    }
+  },
+  {
+    "customer_id": "CUST003",
+    "personal_info": {
+      "full_name": "Amit Patel",
+      "email": "amit.patel@hotmail.com",
+      "phone": "+91-7654321098",
+      "date_of_birth": "1988-03-20",
+      "aadhaar": "3456 7890 1234",
+      "pan": "CDEFG3456H"
+    },
+    "address": {
+      "street": "Plot 789, SG Highway",
+      "city": "Ahmedabad",
+      "state": "Gujarat",
+      "pincode": "380001"
+    },
+    "financial_info": {
+      "account_number": "3456789012",
+      "ifsc_code": "SBIN0003456",
+      "credit_card": "6543-3456-7890-1234",
+      "annual_income": 750000
+    }
+  }
+]
