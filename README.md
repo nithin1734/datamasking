@@ -15,105 +15,27 @@ Datamasking is a small utility/library for masking or redacting sensitive data i
 
 Pick the section that matches your stack.
 
-### Python 🐍
+## Installation (single-command)
 
-Copy these commands to create a virtualenv, install, and run tests:
+To keep installation simple, this project supports a single setup script that installs Python dependencies from requirements.txt and Node dependencies (if package.json exists).
 
-```bash
-# Create & activate virtualenv (macOS / Linux)
-python -m venv .venv
-source .venv/bin/activate
-
-# Create & activate virtualenv (Windows PowerShell)
-python -m venv .venv
-.venv\\Scripts\\activate
-
-# Install (editable/dev)
-python -m pip install -e .
-
-# Install release
-python -m pip install .
-
-# Install dev dependencies from requirements
-pip install -r requirements-dev.txt
-
-# Run tests
-pytest
-
-# Lint / format
-ruff check .
-flake8 .
-black .
-
-# Build sdist & wheel
-python -m build
-
-# Publish with twine (example)
-python -m twine upload dist/*
-```
-
----
-
-### Node.js / JavaScript ⚡
-
-Copy these commands to install dependencies, run tests, and build:
+1. Make sure you have Python 3 and/or Node.js installed.
+2. Create a requirements.txt file at the project root (see example below) or generate one from your environment.
+3. Run the single command:
 
 ```bash
-# Install dependencies
-npm install
+# Unix / macOS
+./setup.sh
 
-# Clean install in CI
-npm ci
-
-# Run tests
-npm test
-
-# Lint / format
-npm run lint
-npm run format
-
-# Build
-npm run build
-
-# Run CLI locally via npx (if package has bin)
-npx datamasking mask --help
+# Windows (PowerShell)
+.\setup.ps1
 ```
 
----
-
-### Go 🦫
-
-Copy these commands to install, build, and test (if applicable):
-
-```bash
-# Install CLI (module aware)
-go install github.com/nithin1734/datamasking/cmd/datamasking@latest
-
-# Build locally
-go build ./cmd/datamasking
-
-# Run tests
-go test ./...
-
-# Run locally
-./datamasking mask --input data/input.csv --output data/out.csv --config mask-rules.yml
-```
-
----
-
-### Docker 🐳
-
-Copy these commands to build a Docker image and run the container:
-
-```bash
-# Build Docker image
-docker build -t datamasking:latest .
-
-# Run container (mount host data dir)
-docker run --rm -v "$(pwd)"/data:/data datamasking:latest mask --input /data/input.csv --output /data/output.masked.csv --config /data/mask-rules.yml
-```
-
----
+What the script does:
+- Creates a Python virtual environment at .venv (if not present)
+- Installs Python packages from requirements.txt into the venv
+- Runs npm ci if package.json is present
+- Prints final instructions to activate the venv
 
 ## 📋 CLI examples (common flags) ✨
 
