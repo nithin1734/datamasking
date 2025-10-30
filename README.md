@@ -402,5 +402,4 @@ If you prefer a single license, remove the other file. If you want dual-licensin
 
 ---
 
-## 🙏 Acknowledgments
-- List libraries, resources, or contributors that inspired this project.
+
